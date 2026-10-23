@@ -1,0 +1,15 @@
+{
+  "name": "Alina AI",
+  "short_name": "Alina",
+  "description": "Your voice. Your world. Your AI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e0b0d",
+  "theme_color": "#0e0b0d",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
