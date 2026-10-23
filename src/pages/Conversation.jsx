@@ -258,10 +258,26 @@ export default function Conversation() {
           <Avatar size={40} />
           <div className="min-w-0 flex-1">
             <h1 className="truncate text-[1.02rem] font-semibold leading-tight">{chat?.title || 'New chat'}</h1>
-            <p className="flex items-center gap-1.5 text-xs text-muted">
-              <span className={cx('size-1.5 rounded-full', aiStatus.loading ? 'bg-muted' : online ? 'bg-ok' : 'bg-danger')} />
-              {aiStatus.loading ? 'Checking…' : online ? `Online · ${aiStatus.data.configured_model}` : 'AI offline'}
-            </p>
+
+<p className="flex items-center gap-1.5 text-xs text-muted">
+  <span
+    className={cx(
+      'size-1.5 rounded-full',
+      aiStatus.loading
+        ? 'bg-muted'
+        : online
+          ? 'bg-ok'
+          : 'bg-danger'
+    )}
+  />
+
+  {aiStatus.loading
+    ? 'Checking…'
+    : online
+      ? 'Alina Online'
+      : 'Alina Offline'}
+</p>
+
           </div>
           {chatIdRef.current && <IconButton icon={MoreHorizontal} label="Conversation options" onClick={() => setMenu(true)} />}
         </div>
